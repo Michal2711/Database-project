@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22B26ADC-AABF-D59B-20D9-AC7BE880F9F5" name="AUTORSTWA">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[AUTORSTWO jest to tabela, która pomogła rozbić związek wiele do wielu, który występował między tabelami WNIOSEK i AUTOR. Jest to tabela, która przechowuje unikalny identyfikator, którym jest LP ( liczba porządkowa ) oraz TYP AUTORSTWA, który jest atrybutem asocjacyjnym]]></commentInRDBMS>
+<generatorID>66A39DA2-2AD5-7668-D4DF-6E5D92E5B167</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<abbreviation>atr</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_WNIOSKU" id="73499BE7-BBE6-C54A-C0E9-C3874D70E24D">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>236590ED-A6ED-0E66-B32A-815BA53B23F3</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CF9FD0A-0CA6-5E80-730A-7A8073745EBC" referredColumn="A0AEE4DC-D99F-0EED-1447-7998054F58B9"/>
+</associations>
+</Column>
+<Column name="LP" id="3AA24C43-34D5-E318-7790-47BDA3F42800">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Liczba porządkowa]]></commentInRDBMS>
+<generatorID>DC46D7BA-67B0-50BF-4FFA-AB9B49147F84</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_AUTORA" id="9A83B2FE-48A4-5804-63AD-B98077246D2B">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>CD9C59E8-4309-63C8-023F-6DB15FD27421</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="521B583F-D503-5C9F-25A1-B174CA228536" referredColumn="39B4F277-7AC4-C224-6276-0740779CF3A2"/>
+</associations>
+</Column>
+<Column name="TYP_AUTORSTWA" id="3837C715-AA59-C430-1D2F-8CD9ACB78E4F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[TYP AUTORSTWA jest atrybutem asocjacyjnym]]></commentInRDBMS>
+<generatorID>98EFCAE8-2BD1-04AA-E913-BDF27C6A116F</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="47569C8E-173E-DE92-DBA6-364F7DD20872" name="ATR_PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>D9B5D783-D8FF-2A11-51EC-6A64EB4CD19B</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73499BE7-BBE6-C54A-C0E9-C3874D70E24D"/>
+<colUsage columnID="3AA24C43-34D5-E318-7790-47BDA3F42800"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BCAB6D76-002C-C301-A2B9-520F4BE71FBB" name="ATR_ID_OSOBY_IDX">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 18:11:16 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A83B2FE-48A4-5804-63AD-B98077246D2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66458972-72D0-114E-2245-AAD3659AF096" name="ATR_OSB_FK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>D9489E14-E72D-4912-0BA3-61BEC7EBE25C</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A83B2FE-48A4-5804-63AD-B98077246D2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F734644C-C3FC-39EF-70F8-53A6EC6B823F" name="ATR_WNSK_FK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>5E3B85A9-1A4F-9DCE-1B71-D793D9AB72E2</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73499BE7-BBE6-C54A-C0E9-C3874D70E24D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="AUTORSTWA_CHECK" directorySegmentName="seg_0" id="7F5FC07B-5FC7-C3BD-C80B-30D10DECA344">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:51:30 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<rule><![CDATA[TYP_AUTORSTWA IN ('A', 'R', 'T')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

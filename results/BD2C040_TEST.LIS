@@ -1,0 +1,96 @@
+SQL> 
+SQL> SELECT Tytul, ROUND(OCENA, 2) as srednia_ocen
+  2  FROM OCENA_WNIOSKU
+  3  ORDER BY ROUND(OCENA, 2);
+
+TYTUL                                              SREDNIA_OCEN
+-------------------------------------------------- ------------
+Tytul_1                                                       2
+Tytul_3                                                       2
+Tytul_5                                                    2,67
+Tytul_2                                                       4
+Tytul_6                                                       4
+Tytul_4                                                       5
+
+6 rows selected. 
+
+SQL> 
+SQL> SELECT TYTUL, ROUND(OCENA, 2) AS najlepszy_wynik
+  2  FROM OCENA_WNIOSKU
+  3  ORDER BY ROUND(OCENA, 2) DESC
+  4  FETCH FIRST 3 ROWS ONLY;
+
+TYTUL                                              NAJLEPSZY_WYNIK
+-------------------------------------------------- ---------------
+Tytul_4                                                          5
+Tytul_6                                                          4
+Tytul_2                                                          4
+
+SQL> 
+SQL> SELECT ID_OSOBY, IMIE, NAZWISKO, count(*) as ile_zlozonych_wnioskow
+  2  FROM OSOBY o JOIN AUTORSTWA a ON (o.ID_OSOBY = a.ID_AUTORA)
+  3  GROUP BY ID_OSOBY, IMIE, NAZWISKO
+  4  ORDER BY count(*) DESC;
+
+  ID_OSOBY IMIE                 NAZWISKO             ILE_ZLOZONYCH_WNIOSKOW
+---------- -------------------- -------------------- ----------------------
+      4001 Dariusz              Kowalski                                  1
+      5001 Anna                 Jankowska                                 1
+      3001 Eryk                 Lewandowski                               1
+      2001 Bartosz              Nowak                                     1
+      1001 Kacper               Kowalczyk                                 1
+         1 Michal               Kopec                                     1
+
+6 rows selected. 
+
+SQL> 
+SQL> SELECT ID_OSOBY, IMIE, NAZWISKO, count(*) as ile_recenzji
+  2  FROM OSOBY o JOIN recenzje r ON ( o.ID_OSOBY = r.ID_RECENZENTA )
+  3  GROUP BY ID_OSOBY, IMIE, NAZWISKO
+  4  ORDER BY count(*) DESC;
+
+  ID_OSOBY IMIE                 NAZWISKO             ILE_RECENZJI
+---------- -------------------- -------------------- ------------
+      8001 Kacper               Pomocny                         3
+      9001 Karolina             Mazurska                        2
+      6001 Maciej               Traski                          2
+     10001 Oskar                Korzybski                       2
+     11001 Marta                Wodna                           1
+      7001 Weronika             Krzemowska                      1
+
+6 rows selected. 
+
+SQL> 
+SQL> SELECT IMIE, NAZWISKO, DATA_URODZENIA, PESEL
+  2  FROM OSOBY
+  3  WHERE CZY_AUTOR = '1';
+
+IMIE                 NAZWISKO             DATA_URO PESEL      
+-------------------- -------------------- -------- -----------
+Michal               Kopec                01/11/27 01312705191
+Kacper               Kowalczyk            93/01/03 93010361331
+Bartosz              Nowak                87/03/27 87032779438
+Eryk                 Lewandowski          93/12/23 93122352294
+Dariusz              Kowalski             98/12/20 98122041799
+Anna                 Jankowska            76/09/06 76090659642
+
+6 rows selected. 
+
+SQL> 
+SQL> SELECT IMIE, NAZWISKO, DATA_URODZENIA, PESEL
+  2  FROM OSOBY
+  3  WHERE CZY_RECENZENT = '1';
+
+IMIE                 NAZWISKO             DATA_URO PESEL      
+-------------------- -------------------- -------- -----------
+Maciej               Traski               78/05/19 78051991318
+Weronika             Krzemowska           57/01/24 57012413526
+Kacper               Pomocny              61/12/19 61121913196
+Karolina             Mazurska             97/01/11 97011189987
+Oskar                Korzybski            96/12/27 96122725976
+Marta                Wodna                99/01/31 99013122489
+
+6 rows selected. 
+
+SQL> 
+SQL> spool off

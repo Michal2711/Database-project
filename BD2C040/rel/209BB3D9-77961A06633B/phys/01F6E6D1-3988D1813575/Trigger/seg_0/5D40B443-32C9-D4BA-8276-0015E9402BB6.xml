@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="rczja_ins_trg" directorySegmentName="seg_0" id="5D40B443-32C9-D4BA-8276-0015E9402BB6">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 15:51:47 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+	nr RECENZJE.NR_RECENZJI%TYPE;
+BEGIN
+	SELECT MAX(NR_RECENZJI) INTO nr
+	FROM RECENZJE
+	WHERE ID_WNIOSKU = :NEW.ID_WNIOSKU;
+
+	IF nr is NULL THEN nr := 1;
+	ELSIF  nr = 1 OR nr = 2  THEN 
+		SELECT nr + 1 INTO :NEW.NR_RECENZJI FROM dual;
+	ELSIF  nr = 3  THEN
+        raise_application_error(-20001, 'Wniosek oceniony juz przez 3 osoby');
+	END IF;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<state>ENABLE</state>
+<table>2A3D64CC-D455-86DD-0632-3F6867F5EA55</table>
+</TriggerOraclev10g>

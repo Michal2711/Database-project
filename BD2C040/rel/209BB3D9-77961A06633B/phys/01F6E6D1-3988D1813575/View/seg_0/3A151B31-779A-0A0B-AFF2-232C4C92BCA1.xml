@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="KONKRETNA_OCENA_WNIOSKU" directorySegmentName="seg_0" id="3A151B31-779A-0A0B-AFF2-232C4C92BCA1">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:31:07 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="KONKRETNA_OCENA_WNIOSKU" id="E4369B65-B25D-03D3-E580-454320FED497">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:38:19 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<objectName>KONKRETNA_OCENA_WNIOSKU</objectName>
+<objectUser>6BEB1E32-1519-DB14-BA6E-AF479043AD6E</objectUser>
+<user>CDF9FC63-5E19-C686-3B16-1D86FEDAB561</user>
+<referredObjectID>3A151B31-779A-0A0B-AFF2-232C4C92BCA1</referredObjectID>
+</Synonym>
+</synonyms>
+</TableViewProxyOraclev10g>

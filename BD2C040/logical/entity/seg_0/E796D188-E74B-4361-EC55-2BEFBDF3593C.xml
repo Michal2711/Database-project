@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E796D188-E74B-4361-EC55-2BEFBDF3593C" name="RECENZJA">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 23:09:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[RECENZJA jest to encja przechowująca pojedyncze recenzje, a atrybutami są:
+ID RECENZJI ( unikalny identyfikator ) oraz OCENA ( w skali od 0 do 5 ) oraz UZASADNIENIE]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>RECENZJE</preferredAbbreviation>
+<shortName>RCZJA</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NR RECENZJI" id="283984EC-760F-0820-C442-B1151BAF02D8">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 23:09:11 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OCENA" id="5C5B698A-7E0B-6FD1-A223-4E2D0099D5E3">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 23:09:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ocena wniosku w skali 0-5]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="UZASADNIENIE" id="457E8104-6898-DE11-1431-F0A9E9BFB5FE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 23:09:29 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID WNIOSKU" id="AEC1E71C-7D7E-909B-9B65-B6044F2E76B8">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-27 21:27:24 UTC</createdTime>
+<generatorID>C574F1D1-961B-2A94-FEF1-01A82BD127D4</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<referedAttribute>8CE5A54C-F243-E87C-BA11-5E703FCAA0E0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID OSOBY" id="E1A1F947-07C2-5261-3B92-6F386EC15867">
+<createdBy>Michał</createdBy>
+<createdTime>2022-04-22 18:44:33 UTC</createdTime>
+<generatorID>DE6359FD-EA44-3935-2945-A3B337FCEF85</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<referedAttribute>64DC9CC0-A790-943C-05BC-E44ECC6AD9F4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="29317A55-D66E-33EC-85B9-E4E943A407B2" name="Recenzja PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 23:09:28 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>283984EC-760F-0820-C442-B1151BAF02D8</attributeRef>
+<attributeRef>AEC1E71C-7D7E-909B-9B65-B6044F2E76B8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

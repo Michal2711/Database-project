@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TWORZENIE RECENZJI" directorySegmentName="seg_0" id="DE6359FD-EA44-3935-2945-A3B337FCEF85">
+<createdBy>Michał</createdBy>
+<createdTime>2022-04-22 18:44:04 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<sourcePk>29317A55-D66E-33EC-85B9-E4E943A407B2</sourcePk>
+<targetPk>86FEC8B4-C2E6-FE2C-599F-FDB0B36A1D98</targetPk>
+<identifying>false</identifying>
+<nameOnSource>napisana przez</nameOnSource>
+<nameOnTarget>napisał</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>E796D188-E74B-4361-EC55-2BEFBDF3593C</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>5CA65CC2-7C46-E115-ACCE-E28A79500D34</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

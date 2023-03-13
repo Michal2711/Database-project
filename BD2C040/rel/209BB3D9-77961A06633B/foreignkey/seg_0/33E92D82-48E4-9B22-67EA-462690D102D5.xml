@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="33E92D82-48E4-9B22-67EA-462690D102D5" containerWithKeyObject="2A3D64CC-D455-86DD-0632-3F6867F5EA55" localFKIndex="E244BD65-613C-8E63-54FC-034D690EAC6B" name="RCZJA_WNSK_FK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>C574F1D1-961B-2A94-FEF1-01A82BD127D4</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<referredTableLongName>WNIOSKI</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B3DF9703-4651-EF02-5F47-CCE17CA594CA</referredTableID>
+<keyObject>8364C720-9F3B-A654-2D2E-0E9029835BE8</keyObject>
+<referredKeyID>8364C720-9F3B-A654-2D2E-0E9029835BE8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_WNIOSKU</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

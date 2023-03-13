@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="OSOBY" directorySegmentName="seg_0" id="28FBC1A6-19C8-D50E-3486-9711A25A9358">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="AFILIACJA" id="1DC5449B-F4FD-1484-6BAE-5C214612A31C">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_URODZENIA" id="2075EB9A-B1DD-BED8-5818-C1CC1126F6AF">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_OSOBY" id="39B4F277-7AC4-C224-6276-0740779CF3A2">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STOPIEN_NAUKOWY" id="A2451E4C-6318-A360-8023-2A50B327ACCF">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CZY_AUTOR" id="BD49C72A-DBE6-CECF-9CB3-394AC020F0D6">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IMIE" id="BF6FDACB-884D-F68D-9DE6-242F33E108AE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PESEL" id="CA96F598-2F4D-5F07-2C93-FCFDFC1BE921">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAZWISKO" id="CE0C55FC-230B-D7DF-0BF3-4CC74B63B757">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CZY_RECENZENT" id="DDC47ED6-4CC7-9D84-9F38-25BEAD3FAF96">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NUMER_RECENZENTA" id="EDF50046-74D6-9A26-CCC4-A9FFA7203CCC">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DRUGIE_IMIE" id="F7A9CEB2-6CFD-802A-721A-5EB4AE86B86F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="OSOBY" id="909A0C8F-5501-709E-A3DD-80C225AB0251">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:37:56 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<objectName>OSOBY</objectName>
+<objectUser>6BEB1E32-1519-DB14-BA6E-AF479043AD6E</objectUser>
+<user>CDF9FC63-5E19-C686-3B16-1D86FEDAB561</user>
+<referredObjectID>28FBC1A6-19C8-D50E-3486-9711A25A9358</referredObjectID>
+</Synonym>
+</synonyms>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OSB_PK" id="EF09E054-84C3-8B75-B45B-E903D1FA1A3F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="ID_OSOBY_CHECK" id="0C356993-2872-0895-9223-690D97660AA5">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 17:11:24 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="CHECK_AUTOR_RECENZENT" id="25ED32E9-ACAE-CA8F-1427-82613B4C8184">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="CHECK_STOPIEN_NAUKOWY" id="5E7722A3-D943-D00E-0326-E14F7E84613D">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="OSB_RECENZENT_UNIQUE" id="481A1FA7-9003-92F5-690E-60675A371F4B">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="OSB_UNIQUE" id="876D32FB-14DF-01D0-6FD9-513FB33A1432">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

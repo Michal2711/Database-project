@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="wnsk_ins_trg" directorySegmentName="seg_0" id="5B33E391-3B88-32C0-FABB-08FD97F3E262">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 13:18:44 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    SELECT seq_id_wniosku.NEXTVAL INTO :NEW.ID_WNIOSKU FROM dual; 
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<state>ENABLE</state>
+<table>B3DF9703-4651-EF02-5F47-CCE17CA594CA</table>
+</TriggerOraclev10g>

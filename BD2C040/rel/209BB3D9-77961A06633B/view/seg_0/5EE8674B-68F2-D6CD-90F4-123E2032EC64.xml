@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="5EE8674B-68F2-D6CD-90F4-123E2032EC64" name="OCENA_WNIOSKU">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:22:57 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<ordsAlias>view_1</ordsAlias>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[SELECT TYTUL, AVG(OCENA)
+FROM RECENZJE r JOIN WNIOSKI w USING(ID_WNIOSKU)
+GROUP BY TYTUL]]></userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="TYTUL" id="40B699AC-3C3A-BEC0-41A1-E1AD8E1EF2DF">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:26:04 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (50)</dataType>
+<headerAlias>TYTUL</headerAlias>
+<reference>false</reference>
+<referencedColumn>D5BEA7BB-DA06-D660-B235-40C08759E9D6</referencedColumn>
+<table>B3DF9703-4651-EF02-5F47-CCE17CA594CA</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OCENA" id="860B2D81-C27D-53DD-2E0C-1A1CD3E21B6C">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:26:04 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NUMBER (1)</dataType>
+<headerAlias>OCENA</headerAlias>
+<reference>false</reference>
+<referencedColumn>7154C06D-472B-0071-6A7B-4EF8758C2AAB</referencedColumn>
+<table>2A3D64CC-D455-86DD-0632-3F6867F5EA55</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2A3D64CC-D455-86DD-0632-3F6867F5EA55">
+<container>true</container>
+<tableName>RECENZJE</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B3DF9703-4651-EF02-5F47-CCE17CA594CA">
+<container>true</container>
+<tableName>WNIOSKI</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D5BEA7BB-DA06-D660-B235-40C08759E9D6">
+<columnName>TYTUL</columnName>
+<tableName>WNIOSKI</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7154C06D-472B-0071-6A7B-4EF8758C2AAB">
+<columnName>OCENA</columnName>
+<tableName>RECENZJE</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6840AFB6-BE8B-1D12-CF2A-EEDC8CED224F">
+<columnName>ID_WNIOSKU</columnName>
+<tableName>RECENZJE</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

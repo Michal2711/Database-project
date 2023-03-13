@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2A3D64CC-D455-86DD-0632-3F6867F5EA55" name="RECENZJE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[RECENZJA jest to tabela przechowująca pojedyncze recenzje, a atrybutami są:
+ID RECENZJI ( unikalny identyfikator ) oraz OCENA ( w skali od 0 do 5 ) oraz UZASADNIENIE]]></commentInRDBMS>
+<generatorID>E796D188-E74B-4361-EC55-2BEFBDF3593C</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<abbreviation>RCZJA</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_WNIOSKU" id="6840AFB6-BE8B-1D12-CF2A-EEDC8CED224F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>AEC1E71C-7D7E-909B-9B65-B6044F2E76B8</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33E92D82-48E4-9B22-67EA-462690D102D5" referredColumn="A0AEE4DC-D99F-0EED-1447-7998054F58B9"/>
+</associations>
+</Column>
+<Column name="NR_RECENZJI" id="7BF58E4A-8EDC-F5A6-6120-96C47BF07B07">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>283984EC-760F-0820-C442-B1151BAF02D8</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_RECENZENTA" id="87F2B526-4911-30F9-0ECF-0592563861CA">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>E1A1F947-07C2-5261-3B92-6F386EC15867</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E063DE4-B778-43AC-C408-2B1BB3E61365" referredColumn="39B4F277-7AC4-C224-6276-0740779CF3A2"/>
+</associations>
+</Column>
+<Column name="OCENA" id="7154C06D-472B-0071-6A7B-4EF8758C2AAB">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ocena wniosku w skali 0-5]]></commentInRDBMS>
+<generatorID>5C5B698A-7E0B-6FD1-A223-4E2D0099D5E3</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UZASADNIENIE" id="B8FADBE9-52CC-A911-EA62-7CFE7FFD7923">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>457E8104-6898-DE11-1431-F0A9E9BFB5FE</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9A1D3C8D-5132-1114-5191-85A500CB824B" name="RCZJA_PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>29317A55-D66E-33EC-85B9-E4E943A407B2</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6840AFB6-BE8B-1D12-CF2A-EEDC8CED224F"/>
+<colUsage columnID="7BF58E4A-8EDC-F5A6-6120-96C47BF07B07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="568905B8-8BD4-29E9-C2DA-3C7AE351CC50" name="RCZJA_ID_OSOBY_IDX">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 18:19:39 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87F2B526-4911-30F9-0ECF-0592563861CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E244BD65-613C-8E63-54FC-034D690EAC6B" name="RCZJA_WNSK_FK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>C574F1D1-961B-2A94-FEF1-01A82BD127D4</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6840AFB6-BE8B-1D12-CF2A-EEDC8CED224F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="970AF83D-30CC-91BB-39B6-7E2B7DF66744" name="RCZJA_OSB_FK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>DE6359FD-EA44-3935-2945-A3B337FCEF85</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87F2B526-4911-30F9-0ECF-0592563861CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ZAKRES_OCENY_CHECK" directorySegmentName="seg_0" id="3C4E171A-E05F-8A08-6E85-80D134F40D4D">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 11:50:42 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<rule><![CDATA[OCENA IN (0, 1, 2, 3, 4, 5)]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="NR_RECENZJI_CHECK" directorySegmentName="seg_0" id="9C8515CC-92D3-A107-D82D-290440DB3600">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:53:27 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<rule><![CDATA[NR_RECENZJI IN (1, 2, 3)]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

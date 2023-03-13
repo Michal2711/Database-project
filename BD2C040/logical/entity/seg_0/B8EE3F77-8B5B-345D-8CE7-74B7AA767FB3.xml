@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B8EE3F77-8B5B-345D-8CE7-74B7AA767FB3" name="OSOBA">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:20:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[OSOBY jest to encja przechowująca poszczególne dane personalne autorów oraz recenzentów wraz z podtypami: RECENZENT oraz AUTOR. Dane personalne to m.in:
+IMIE, NAZWISKO, PESEL. Posiada ona unikalny identyfikator, którym jest ID_OSOBY oraz unikalne identyfikator złożony z nazwiska, imienia oraz daty urodzenia.]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>OSOBY</preferredAbbreviation>
+<shortName>osb</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID OSOBY" id="64DC9CC0-A790-943C-05BC-E44ECC6AD9F4">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:56:18 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NAZWISKO" id="DF9CBCBE-4638-A056-9A7D-B8D9D63F51BA">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:56:29 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IMIĘ" id="99AD6AC4-CE8C-E484-6FD9-E9AA6018721D">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:56:42 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DRUGIE IMIĘ" id="2EB92F74-FAFA-E9AA-DC62-87B26C8B88ED">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:56:53 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATA URODZENIA" id="F023281A-2D58-C509-C3B5-648D635BA493">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:57:01 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PESEL" id="C3627C53-D043-7A96-A3AC-51A4C496D6AB">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:57:05 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STOPIEŃ NAUKOWY" id="665610B1-9770-E9BC-D61D-08167341EB12">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-08 15:12:42 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="86FEC8B4-C2E6-FE2C-599F-FDB0B36A1D98" name="Autor PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:56:26 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>64DC9CC0-A790-943C-05BC-E44ECC6AD9F4</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="93CD9B25-A7F1-C665-C53D-A804DD4FF368" name="Osoba Unique_key">
+<createdBy>Michał</createdBy>
+<createdTime>2022-04-23 18:36:44 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="false"/>
+</engineerTo>
+<newElementsIDs>DF9CBCBE-4638-A056-9A7D-B8D9D63F51BA,99AD6AC4-CE8C-E484-6FD9-E9AA6018721D,F023281A-2D58-C509-C3B5-648D635BA493,C3627C53-D043-7A96-A3AC-51A4C496D6AB</newElementsIDs>
+<usedAttributes>
+<attributeRef>DF9CBCBE-4638-A056-9A7D-B8D9D63F51BA</attributeRef>
+<attributeRef>99AD6AC4-CE8C-E484-6FD9-E9AA6018721D</attributeRef>
+<attributeRef>F023281A-2D58-C509-C3B5-648D635BA493</attributeRef>
+<attributeRef>C3627C53-D043-7A96-A3AC-51A4C496D6AB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,214 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="28FBC1A6-19C8-D50E-3486-9711A25A9358" name="OSOBY">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[OSOBY jest to tabela przechowująca poszczególne dane personalne autorów oraz recenzentów. Dane personalne to m.in:
+IMIE, NAZWISKO, PESEL. Posiada ona klucz główy, którym jest ID_OSOBY oraz unikalne identyfikator złożony z nazwiska, imienia oraz daty urodzenia i peselu. Dodatkowo unikalny identyfikator numer_recenzenta sprawia że nie mogą się powtórzyć dwaj recenzenci o tym samym numerze. kolumny CZY_RECENZENT oraz CZY_AUTOR określają czy dany wiersz tabeli opisuje recenzenta, czy autora]]></commentInRDBMS>
+<generatorID>B8EE3F77-8B5B-345D-8CE7-74B7AA767FB3</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<abbreviation>osb</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_OSOBY" id="39B4F277-7AC4-C224-6276-0740779CF3A2">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>64DC9CC0-A790-943C-05BC-E44ECC6AD9F4</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZWISKO" id="CE0C55FC-230B-D7DF-0BF3-4CC74B63B757">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>DF9CBCBE-4638-A056-9A7D-B8D9D63F51BA</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMIE" id="BF6FDACB-884D-F68D-9DE6-242F33E108AE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>99AD6AC4-CE8C-E484-6FD9-E9AA6018721D</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DRUGIE_IMIE" id="F7A9CEB2-6CFD-802A-721A-5EB4AE86B86F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>2EB92F74-FAFA-E9AA-DC62-87B26C8B88ED</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_URODZENIA" id="2075EB9A-B1DD-BED8-5818-C1CC1126F6AF">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>F023281A-2D58-C509-C3B5-648D635BA493</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PESEL" id="CA96F598-2F4D-5F07-2C93-FCFDFC1BE921">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>C3627C53-D043-7A96-A3AC-51A4C496D6AB</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STOPIEN_NAUKOWY" id="A2451E4C-6318-A360-8023-2A50B327ACCF">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>665610B1-9770-E9BC-D61D-08167341EB12</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMER_RECENZENTA" id="EDF50046-74D6-9A26-CCC4-A9FFA7203CCC">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:58:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[Posiada UNIQUE KEY, aby nie powtórzyli się dwaj recenzenci o tym samym numerze]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AFILIACJA" id="1DC5449B-F4FD-1484-6BAE-5C214612A31C">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:59:02 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CZY_RECENZENT" id="DDC47ED6-4CC7-9D84-9F38-25BEAD3FAF96">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:59:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Możliwe wartości:
+0 - jest to autor
+1 - jest to recenzent]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CZY_AUTOR" id="BD49C72A-DBE6-CECF-9CB3-394AC020F0D6">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:59:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Możliwe wartości:
+0 - jest to recenzent
+1 - jest to autor]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EF09E054-84C3-8B75-B45B-E903D1FA1A3F" name="OSB_PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>86FEC8B4-C2E6-FE2C-599F-FDB0B36A1D98</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39B4F277-7AC4-C224-6276-0740779CF3A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="876D32FB-14DF-01D0-6FD9-513FB33A1432" name="OSB_UNIQUE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>93CD9B25-A7F1-C665-C53D-A804DD4FF368</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE0C55FC-230B-D7DF-0BF3-4CC74B63B757"/>
+<colUsage columnID="BF6FDACB-884D-F68D-9DE6-242F33E108AE"/>
+<colUsage columnID="2075EB9A-B1DD-BED8-5818-C1CC1126F6AF"/>
+<colUsage columnID="CA96F598-2F4D-5F07-2C93-FCFDFC1BE921"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="481A1FA7-9003-92F5-690E-60675A371F4B" name="OSB_RECENZENT_UNIQUE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 18:09:32 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDF50046-74D6-9A26-CCC4-A9FFA7203CCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHECK_AUTOR_RECENZENT" directorySegmentName="seg_0" id="25ED32E9-ACAE-CA8F-1427-82613B4C8184">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:12:19 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<rule><![CDATA[(CZY_RECENZENT = 1 AND CZY_AUTOR = 0) OR (CZY_RECENZENT = 0 AND CZY_AUTOR = 1)]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CHECK_STOPIEN_NAUKOWY" directorySegmentName="seg_0" id="5E7722A3-D943-D00E-0326-E14F7E84613D">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:14:42 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<rule><![CDATA[STOPIEN_NAUKOWY IN ('inzynier', 'magister', 'doktor', 'profesor')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ID_OSOBY_CHECK" directorySegmentName="seg_0" id="0C356993-2872-0895-9223-690D97660AA5">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 17:11:24 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<rule><![CDATA[ID_OSOBY > 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B3DF9703-4651-EF02-5F47-CCE17CA594CA" name="WNIOSKI">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Wniosek jest tabelą reprezentującą pojedynczy wniosek złożony do instytucji finansującej badania naukowe.
+Tabela ta zawiera unikalny identyfikator ID WNIOSKU, atrybut opis projektu, tytuł oraz datę złożenia wniosku]]></commentInRDBMS>
+<generatorID>DC257A01-E743-708B-8BEF-01D0DD8FDD24</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<abbreviation>WNSK</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_WNIOSKU" id="A0AEE4DC-D99F-0EED-1447-7998054F58B9">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>8CE5A54C-F243-E87C-BA11-5E703FCAA0E0</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OPIS_PROJEKTU" id="1F24EF31-B180-BBAE-43CF-EA527165B3D7">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Długi opis wniosku składający się z maksymalnie 1000 znaków]]></commentInRDBMS>
+<generatorID>4EF21D00-C0A3-0F80-21A9-027E9BFB7FA1</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYTUL" id="D5BEA7BB-DA06-D660-B235-40C08759E9D6">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>2AE3BB84-960E-7D72-6C77-743A552552C1</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_ZLOZENIA" id="7C25982F-3957-8B4A-0261-F7A2A962BCBE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>B63DCC1B-6455-BCDF-A705-A0EE8A1000A6</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8364C720-9F3B-A654-2D2E-0E9029835BE8" name="WNSK_PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>3D2F372D-80CE-B6CA-4966-95FAC2427E23</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0AEE4DC-D99F-0EED-1447-7998054F58B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A777F515-44DA-E633-60DE-B4C39B59201C" name="WNSK_TYTUŁ_UN">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-27 17:48:41 UTC</createdTime>
+<generatorID>C4D1E250-B1A3-C58C-C12C-723FFF3675D8</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5BEA7BB-DA06-D660-B235-40C08759E9D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ID_WNIOSKU_CHECK" directorySegmentName="seg_0" id="E853F19C-11FA-C481-E591-CEC73FAF674A">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 17:11:02 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<rule><![CDATA[ID_WNIOSKU > 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="AUTORSTWA" directorySegmentName="seg_0" id="22B26ADC-AABF-D59B-20D9-AC7BE880F9F5">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TYP_AUTORSTWA" id="3837C715-AA59-C430-1D2F-8CD9ACB78E4F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LP" id="3AA24C43-34D5-E318-7790-47BDA3F42800">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_WNIOSKU" id="73499BE7-BBE6-C54A-C0E9-C3874D70E24D">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<deferrable>YES</deferrable>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="ID_AUTORA" id="9A83B2FE-48A4-5804-63AD-B98077246D2B">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<deferrable>YES</deferrable>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ATR_ID_OSOBY_IDX" id="BCAB6D76-002C-C301-A2B9-520F4BE71FBB">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="AUTORSTWA" id="E1BD1355-999B-2AD9-DB0B-435222DC3553">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:37:16 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<objectName>AUTORSTWA</objectName>
+<objectUser>6BEB1E32-1519-DB14-BA6E-AF479043AD6E</objectUser>
+<user>CDF9FC63-5E19-C686-3B16-1D86FEDAB561</user>
+<referredObjectID>22B26ADC-AABF-D59B-20D9-AC7BE880F9F5</referredObjectID>
+</Synonym>
+</synonyms>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ATR_OSB_FK" id="66458972-72D0-114E-2245-AAD3659AF096">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ATR_WNSK_FK" id="F734644C-C3FC-39EF-70F8-53A6EC6B823F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ATR_PK" id="47569C8E-173E-DE92-DBA6-364F7DD20872">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="AUTORSTWA_CHECK" id="7F5FC07B-5FC7-C3BD-C80B-30D10DECA344">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:51:30 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev20c>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="WNIOSKI" directorySegmentName="seg_0" id="B3DF9703-4651-EF02-5F47-CCE17CA594CA">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="OPIS_PROJEKTU" id="1F24EF31-B180-BBAE-43CF-EA527165B3D7">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_ZLOZENIA" id="7C25982F-3957-8B4A-0261-F7A2A962BCBE">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_WNIOSKU" id="A0AEE4DC-D99F-0EED-1447-7998054F58B9">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TYTUL" id="D5BEA7BB-DA06-D660-B235-40C08759E9D6">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="WNIOSKI" id="70A358CC-D3BA-19D9-A4F0-84030B5F0F99">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:36:42 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<objectName>WNIOSKI</objectName>
+<objectUser>6BEB1E32-1519-DB14-BA6E-AF479043AD6E</objectUser>
+<user>CDF9FC63-5E19-C686-3B16-1D86FEDAB561</user>
+<referredObjectID>B3DF9703-4651-EF02-5F47-CCE17CA594CA</referredObjectID>
+</Synonym>
+</synonyms>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="WNSK_PK" id="8364C720-9F3B-A654-2D2E-0E9029835BE8">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="ID_WNIOSKU_CHECK" id="E853F19C-11FA-C481-E591-CEC73FAF674A">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 17:11:02 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="WNSK_TYTUŁ_UN" id="A777F515-44DA-E633-60DE-B4C39B59201C">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

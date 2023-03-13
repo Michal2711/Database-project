@@ -1,0 +1,99 @@
+SQL> set linesize 300
+SQL> set pagesize 500
+SQL> spool BD2C040_DML.LIS
+SQL> 
+SQL> -- proba dodania osoby ktorej stopien naukowy jest bledny
+SQL> INSERT INTO osoby VALUES(6001, 'kopec7', 'michal7', null, '01/02/2001', '01312705191', 'szef', null, 'Politechnika Warszawska', '0', '1');
+
+Error starting at line : 7 in command -
+INSERT INTO osoby VALUES(6001, 'kopec7', 'michal7', null, '01/02/2001', '01312705191', 'szef', null, 'Politechnika Warszawska', '0', '1')
+Error report -
+ORA-02290: naruszono wiêzy CHECK (BD2C040.CHECK_STOPIEN_NAUKOWY)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> -- osoba nie moze byc jednoczesnie autorem i recenzentem, albo nie moze nie byc ani autorem ani recenzentem
+SQL> INSERT INTO osoby VALUES(1, 'kopec4', 'michal4', null, '01-02-2001', '01312705191', 'doktor', null, 'Politechnika Warszawska', '1', '1');
+
+Error starting at line : 11 in command -
+INSERT INTO osoby VALUES(1, 'kopec4', 'michal4', null, '01-02-2001', '01312705191', 'doktor', null, 'Politechnika Warszawska', '1', '1')
+Error report -
+ORA-02290: naruszono wiêzy CHECK (BD2C040.CHECK_AUTOR_RECENZENT)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> INSERT INTO osoby VALUES(1, 'kopec4', 'michal4', null, '01-02-2001', '01312705191', 'doktor', null, 'Politechnika Warszawska', '0', '0');
+
+Error starting at line : 14 in command -
+INSERT INTO osoby VALUES(1, 'kopec4', 'michal4', null, '01-02-2001', '01312705191', 'doktor', null, 'Politechnika Warszawska', '0', '0')
+Error report -
+ORA-02290: naruszono wiêzy CHECK (BD2C040.CHECK_AUTOR_RECENZENT)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> -- proba dodania rekordu do tabeli autorstwa ktorego typ autorstwa nie nalezy do dziedziny
+SQL> INSERT INTO autorstwa VALUES (5001, 1, 5001, 'B');
+
+Error starting at line : 18 in command -
+INSERT INTO autorstwa VALUES (5001, 1, 5001, 'B')
+Error report -
+ORA-02290: naruszono wiêzy CHECK (BD2C040.AUTORSTWA_CHECK)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> -- proba dodania czwartej recenzji do tego samego wniosku
+SQL> INSERT INTO recenzje VALUES (1, 1, 9001, 1, 'Uzasadnienie');
+
+Error starting at line : 22 in command -
+INSERT INTO recenzje VALUES (1, 1, 9001, 1, 'Uzasadnienie')
+Error report -
+ORA-20001: Wniosek oceniony juz przez 3 osoby
+ORA-06512: przy "BD2C040.RCZJA_INS_TRG", linia 12
+ORA-04088: b³¹d w trakcie wykonywania wyzwalacza 'BD2C040.RCZJA_INS_TRG'
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> -- proba dodania recenzji z ocena poza skala
+SQL> INSERT INTO recenzje VALUES (2, 1, 6001, 6, 'Uzasadnienie');
+
+Error starting at line : 26 in command -
+INSERT INTO recenzje VALUES (2, 1, 6001, 6, 'Uzasadnienie')
+Error report -
+ORA-02290: naruszono wiêzy CHECK (BD2C040.ZAKRES_OCENY_CHECK)
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> -- proba dodania recenzji przez recenzenta ktory juz zrecenzowal dany wniosek
+SQL> INSERT INTO recenzje VALUES (3001, 2, 11001, 1, 'Uzasadnienie');
+
+Error starting at line : 30 in command -
+INSERT INTO recenzje VALUES (3001, 2, 11001, 1, 'Uzasadnienie')
+Error report -
+ORA-20001: Wniosek zostal juz zrecenzowany przez tego recenzenta
+ORA-06512: przy "BD2C040.RCZJA_INS_REC_TRG", linia 9
+ORA-04088: b³¹d w trakcie wykonywania wyzwalacza 'BD2C040.RCZJA_INS_REC_TRG'
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> spool off

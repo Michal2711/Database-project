@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="66A39DA2-2AD5-7668-D4DF-6E5D92E5B167" name="AUTORSTWO">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-25 01:40:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[AUTORSTWO jest to encja, która pomogła rozbić związek wiele do wielu, który występował między encjami WNIOSEK i AUTOR. Jest to encja, która przechowuje unikalny identyfikator, którym jest LP ( liczba porządkowa ) oraz TYP AUTORSTWA, który jest atrybutem asocjacyjnym]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>AUTORSTWA</preferredAbbreviation>
+<shortName>atrstwo</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="LP" id="DC46D7BA-67B0-50BF-4FFA-AB9B49147F84">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-25 01:40:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Liczba porządkowa]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TYP AUTORSTWA" id="98EFCAE8-2BD1-04AA-E913-BDF27C6A116F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-25 01:40:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[TYP AUTORSTWA jest atrybutem asocjacyjnym]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID WNIOSKU" id="236590ED-A6ED-0E66-B32A-815BA53B23F3">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-27 21:24:56 UTC</createdTime>
+<generatorID>5E3B85A9-1A4F-9DCE-1B71-D793D9AB72E2</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<referedAttribute>8CE5A54C-F243-E87C-BA11-5E703FCAA0E0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID OSOBY" id="CD9C59E8-4309-63C8-023F-6DB15FD27421">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-27 21:49:31 UTC</createdTime>
+<generatorID>D9489E14-E72D-4912-0BA3-61BEC7EBE25C</generatorID>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<referedAttribute>64DC9CC0-A790-943C-05BC-E44ECC6AD9F4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D9B5D783-D8FF-2A11-51EC-6A64EB4CD19B" name="Autorstwo PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-25 01:40:32 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DC46D7BA-67B0-50BF-4FFA-AB9B49147F84</attributeRef>
+<attributeRef>236590ED-A6ED-0E66-B32A-815BA53B23F3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

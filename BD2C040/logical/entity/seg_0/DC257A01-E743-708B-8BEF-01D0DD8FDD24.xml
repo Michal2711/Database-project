@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DC257A01-E743-708B-8BEF-01D0DD8FDD24" name="WNIOSEK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:17:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Wniosek jest encją reprezentującą pojedynczy wniosek złożony do instytucji finansującej badania naukowe.
+Encja ta zawiera unikalny identyfikator ID WNIOSKU, atrybut opis projektu, tytuł oraz datę złożenia wniosku]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>WNIOSKI</preferredAbbreviation>
+<shortName>WNSK</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID WNIOSKU" id="8CE5A54C-F243-E87C-BA11-5E703FCAA0E0">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:24:29 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OPIS PROJEKTU" id="4EF21D00-C0A3-0F80-21A9-027E9BFB7FA1">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:58:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[Długi opis wniosku składający się z maksymalnie 1000 znaków]]></commentInRDBMS>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TYTUŁ" id="2AE3BB84-960E-7D72-6C77-743A552552C1">
+<createdBy>Michał</createdBy>
+<createdTime>2022-04-22 18:29:20 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATA ZŁOŻENIA" id="B63DCC1B-6455-BCDF-A705-A0EE8A1000A6">
+<createdBy>Michał</createdBy>
+<createdTime>2022-04-22 18:29:35 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3D2F372D-80CE-B6CA-4966-95FAC2427E23" name="Wniosek PK">
+<createdBy>Michał</createdBy>
+<createdTime>2022-03-24 21:25:06 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8CE5A54C-F243-E87C-BA11-5E703FCAA0E0</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="C4D1E250-B1A3-C58C-C12C-723FFF3675D8" name="Wniosek Unique key">
+<createdBy>Michał</createdBy>
+<createdTime>2022-04-23 18:39:07 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<engineerTo>
+<item key="4157263B-5920-696E-2509-70036EA636C8" value="true"/>
+</engineerTo>
+<newElementsIDs>2AE3BB84-960E-7D72-6C77-743A552552C1</newElementsIDs>
+<usedAttributes>
+<attributeRef>2AE3BB84-960E-7D72-6C77-743A552552C1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

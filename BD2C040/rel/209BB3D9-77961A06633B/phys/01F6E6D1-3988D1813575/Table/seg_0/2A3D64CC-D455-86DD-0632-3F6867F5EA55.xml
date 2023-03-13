@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="RECENZJE" directorySegmentName="seg_0" id="2A3D64CC-D455-86DD-0632-3F6867F5EA55">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_WNIOSKU" id="6840AFB6-BE8B-1D12-CF2A-EEDC8CED224F">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<deferrable>YES</deferrable>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="OCENA" id="7154C06D-472B-0071-6A7B-4EF8758C2AAB">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NR_RECENZJI" id="7BF58E4A-8EDC-F5A6-6120-96C47BF07B07">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_RECENZENTA" id="87F2B526-4911-30F9-0ECF-0592563861CA">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<deferrable>YES</deferrable>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="UZASADNIENIE" id="B8FADBE9-52CC-A911-EA62-7CFE7FFD7923">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="RCZJA_ID_OSOBY_IDX" id="568905B8-8BD4-29E9-C2DA-3C7AE351CC50">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="RECENZJE" id="8F7AFC24-BA22-9683-0E94-4F3C2FC3988B">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 16:37:44 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<objectName>RECENZJE</objectName>
+<objectUser>6BEB1E32-1519-DB14-BA6E-AF479043AD6E</objectUser>
+<user>CDF9FC63-5E19-C686-3B16-1D86FEDAB561</user>
+<referredObjectID>2A3D64CC-D455-86DD-0632-3F6867F5EA55</referredObjectID>
+</Synonym>
+</synonyms>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="RCZJA_OSB_FK" id="970AF83D-30CC-91BB-39B6-7E2B7DF66744">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="RCZJA_WNSK_FK" id="E244BD65-613C-8E63-54FC-034D690EAC6B">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="RCZJA_PK" id="9A1D3C8D-5132-1114-5191-85A500CB824B">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="ZAKRES_OCENY_CHECK" id="3C4E171A-E05F-8A08-6E85-80D134F40D4D">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:40:00 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint name="NR_RECENZJI_CHECK" id="9C8515CC-92D3-A107-D82D-290440DB3600">
+<createdBy>Michał</createdBy>
+<createdTime>2022-05-29 12:53:27 UTC</createdTime>
+<ownerDesignName>BD2C040</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev20c>
